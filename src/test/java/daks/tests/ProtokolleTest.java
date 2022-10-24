@@ -10,17 +10,19 @@ import org.testng.annotations.Test;
 
 public class ProtokolleTest {
 
+    ProtokollePage protokol = new ProtokollePage();
+
     @BeforeMethod
     void beforeMethod() {
         ReusableMethods.getLogin();
     }
 
-    ProtokollePage protokol = new ProtokollePage();
+
 
 
     @Test
     public void seitenListTest() {
-        ReusableMethods.sleep(3000);
+        //ReusableMethods.sleep(3000);
         ReusableMethods.getVisibilityOfWait(protokol.protokolleButton).click();
         ReusableMethods.sleep(1000);
         ReusableMethods.getVisibilityOfWait(protokol.rechterichtungTaste1).click();
@@ -36,7 +38,7 @@ public class ProtokolleTest {
 
     @Test
     public void seitenGrenzenTest() {
-        ReusableMethods.sleep(3000);
+        //ReusableMethods.sleep(3000);
         ReusableMethods.getVisibilityOfWait(protokol.protokolleButton).click();
         ReusableMethods.sleep(1000);
         ReusableMethods.getVisibilityOfWait(protokol.rechterichtungTaste1).click();
@@ -64,17 +66,7 @@ public class ProtokolleTest {
 
 
 
-// Das ist noch nicht fertig!
-   @Test
-   public void  bestimmteSeiteColontTest(){
 
-        ReusableMethods.sleep(2000);
-        ReusableMethods.getVisibilityOfWait(protokol.protokolleButton).click();
-        ReusableMethods.sleep(1000);
-        ReusableMethods.getVisibilityOfWait(protokol.richtungTaste5).click();
-       for (int i = 0; i < protokol.tabelleRow.size(); i++) {
-           System.out.println(i + " = " + protokol.tabelleRow.size());
-       }
    }
 
 
@@ -86,4 +78,3 @@ public class ProtokolleTest {
 
 
 
-}
